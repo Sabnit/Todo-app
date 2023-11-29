@@ -1,0 +1,148 @@
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.container {
+  text-align: center;
+}
+
+.container-wrapper {
+  width: 1140px;
+}
+
+.title {
+  background: var(--Light-Orange, #f1ece6);
+}
+
+.title img {
+  padding: 10px 0;
+}
+
+.menu-bar {
+  background: #f3f3f3;
+  display: flex;
+  justify-content: center;
+}
+.nav-container {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.nav-container a {
+  font-size: 32px;
+  padding: 0 110px;
+}
+
+.nav-container .default {
+  color: #969696;
+}
+
+.to-do-list {
+  padding: 20px;
+  max-width: 1040px;
+  margin: 0 auto;
+}
+
+.to-do-list input {
+  border-radius: 50px;
+  background: var(--Light-Orange, #f1ece6);
+  border: none;
+  padding: 15px 0;
+  width: 100%;
+  color: black;
+  font-size: 32px;
+  font-weight: 400;
+  text-align: center;
+}
+
+.input-field {
+  padding-bottom: 20px;
+}
+
+.input-field input[type="text"]::placeholder {
+  color: #d2d0d0;
+}
+
+#main-container {
+  padding: 20px;
+  background: var(--Light-Orange, #f1ece6);
+  border-radius: 50px;
+  color: #c2c2c2;
+}
+
+.task-list {
+  padding: 15px;
+  font-size: 32px;
+  font-weight: 900;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #76b7cd;
+  gap: 20px;
+  color: black;
+}
+
+.active {
+  border-bottom: 2px solid orange;
+  color: black;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: 1.6px;
+}
+
+.task-list input {
+  height: 30px;
+  width: 30px;
+}
+
+/* custom checkbox */
+
+input[type="checkbox"] {
+  -webkit-appearance: none;
+  appearance: none;
+  margin-left: 10px;
+  color: #333;
+  width: 22px;
+  height: 22px;
+  border: 2px solid #737373;
+  transform: translateY(5px);
+  cursor: pointer;
+  padding: 2px;
+}
+
+input[type="checkbox"] {
+  border-radius: 50%;
+}
+
+input[type="checkbox"]::before {
+  display: block;
+  content: "";
+  width: 14px;
+  height: 14px;
+  transition: 120ms transform ease-in-out;
+  box-shadow: inset 14px 14px #d98326;
+  border-color: #d98326;
+}
+
+input[type="checkbox"]::before {
+  transform-origin: bottom left;
+  clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
+  transform: scale(0);
+}
+
+input[type="checkbox"]:checked::before {
+  transform: scale(1);
+}
+
+input[type="checkbox"]:checked {
+  border-color: orange;
+}
